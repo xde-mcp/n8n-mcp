@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1767701480833,
+  "lastUpdate": 1767702193411,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "a1db133a50baa8c60d662e0ebf136776b45a0822",
-          "message": "Merge pull request #241 from czlonkowski/feature/partial-update-enhancements\n\ntest: add 46 tests to improve workflow-diff-engine coverage to 89.51%",
-          "timestamp": "2025-09-30T17:53:02+02:00",
-          "tree_id": "94da5c8c1d270275efc0f035c38fa61d4c2498bf",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/a1db133a50baa8c60d662e0ebf136776b45a0822"
-        },
-        "date": 1759247680458,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0191,
-            "range": "0.3052",
-            "unit": "ms",
-            "extra": "52360 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.3636,
-            "range": "3.0083",
-            "unit": "ms",
-            "extra": "297 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0046,
-            "range": "0.2665",
-            "unit": "ms",
-            "extra": "215943 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0662,
-            "range": "0.2895",
-            "unit": "ms",
-            "extra": "15101 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2151,6 +2099,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/25cb8bb4559a78e36e0f3c32e3d78a807b107abf"
         },
         "date": 1767701480140,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "7b0ff990ec656b3bbd2f37b763f2206a1468a577",
+          "message": "chore: update n8n to 2.2.3 and bump version to 2.31.7 (#523)\n\n- Updated n8n from 2.1.5 to 2.2.3\n- Updated n8n-core from 2.1.4 to 2.2.2\n- Updated n8n-workflow from 2.1.1 to 2.2.2\n- Updated @n8n/n8n-nodes-langchain from 2.1.4 to 2.2.2\n- Rebuilt node database with 540 nodes (434 from n8n-nodes-base, 106 from @n8n/n8n-nodes-langchain)\n- Updated README badge with new n8n version\n- Updated CHANGELOG with dependency changes\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Romuald Członkowski <romualdczlonkowski@MacBook-Pro-Romuald.local>\nCo-authored-by: Claude <noreply@anthropic.com>",
+          "timestamp": "2026-01-06T13:18:56+01:00",
+          "tree_id": "66c78d7c4efc3ae032888f5da73d96cf5a0076be",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/7b0ff990ec656b3bbd2f37b763f2206a1468a577"
+        },
+        "date": 1767702192710,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
