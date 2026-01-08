@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1767702193411,
+  "lastUpdate": 1767841758309,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "f4dff6b8e12d1fe24d5cd5cb733b6842847252e5",
-          "message": "Merge pull request #243 from czlonkowski/feature/execution-data-filtering\n\nfeat: Intelligent Execution Data Filtering for n8n_get_execution Tool",
-          "timestamp": "2025-10-01T00:21:57+02:00",
-          "tree_id": "cabfa56be93a0a16e54e26a8fe67f8750eecde96",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/f4dff6b8e12d1fe24d5cd5cb733b6842847252e5"
-        },
-        "date": 1759271030160,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0193,
-            "range": "0.2752",
-            "unit": "ms",
-            "extra": "51703 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.1648,
-            "range": "0.46229999999999993",
-            "unit": "ms",
-            "extra": "316 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.005,
-            "range": "0.2929",
-            "unit": "ms",
-            "extra": "199387 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0663,
-            "range": "0.3821",
-            "unit": "ms",
-            "extra": "15093 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2130,6 +2078,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/7b0ff990ec656b3bbd2f37b763f2206a1468a577"
         },
         "date": 1767702192710,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ce2c94c1a5ca64f82fb5b011d7739bdfd0711c66",
+          "message": "fix: recognize dynamic AI Tool nodes in validator (Issue #522) (#526)\n\nWhen n8n connects any node to an AI Agent's tool slot, it creates a\ndynamic Tool variant at runtime (e.g., googleDrive → googleDriveTool).\nThese don't exist in npm packages, causing false \"unknown node type\"\nerrors.\n\nAdded validation-time inference: when a *Tool node type is not found,\ncheck if the base node exists. If yes, treat as valid with warning.\n\nChanges:\n- workflow-validator.ts: Add INFERRED_TOOL_VARIANT logic\n- node-similarity-service.ts: Add 98% confidence for valid Tool variants\n- Added 7 unit tests for inferred tool variant functionality\n\nFixes #522\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Romuald Członkowski <romualdczlonkowski@MacBook-Pro-Romuald.local>\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2026-01-07T18:09:55+01:00",
+          "tree_id": "6b568155d3d2e1333dba098ad082367114a4634f",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/ce2c94c1a5ca64f82fb5b011d7739bdfd0711c66"
+        },
+        "date": 1767841757948,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
