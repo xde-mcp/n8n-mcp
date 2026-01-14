@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1768273882019,
+  "lastUpdate": 1768360562106,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "3bab53a3be7516c9b95516f10a43543de661a8b5",
-          "message": "Merge pull request #250 from czlonkowski/feature/p0-priorities-fixes\n\nfeat(P0-R3): Pre-extracted template configurations + Remove get_node_for_task",
-          "timestamp": "2025-10-03T09:08:07+02:00",
-          "tree_id": "d05bf45ce167750b84362d671ab7341f4d06a746",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/3bab53a3be7516c9b95516f10a43543de661a8b5"
-        },
-        "date": 1759475397473,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0192,
-            "range": "0.2307",
-            "unit": "ms",
-            "extra": "52217 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.1656,
-            "range": "0.46320000000000006",
-            "unit": "ms",
-            "extra": "316 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0046,
-            "range": "0.2481",
-            "unit": "ms",
-            "extra": "215526 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0675,
-            "range": "0.2952",
-            "unit": "ms",
-            "extra": "14820 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2067,6 +2015,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/a6dcbd2473634e8afd1d4aa9613971287733a6bd"
         },
         "date": 1768273881753,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "974a9fb3492fe2c4984ee0549085d531cdc6242a",
+          "message": "chore: update n8n to 2.3.3 and bump version to 2.33.2 (#535)\n\n- Updated n8n from 2.2.3 to 2.3.3\n- Updated n8n-core from 2.2.2 to 2.3.2\n- Updated n8n-workflow from 2.2.2 to 2.3.2\n- Updated @n8n/n8n-nodes-langchain from 2.2.2 to 2.3.2\n- Rebuilt node database with 537 nodes (434 from n8n-nodes-base, 103 from @n8n/n8n-nodes-langchain)\n- Updated README badge with new n8n version\n- Updated CHANGELOG with dependency changes\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2026-01-13T17:47:27+01:00",
+          "tree_id": "79bb647536c9c858570eb5aef0acf8a1bbcb4a15",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/974a9fb3492fe2c4984ee0549085d531cdc6242a"
+        },
+        "date": 1768360561298,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
