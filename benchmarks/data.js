@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1768360562106,
+  "lastUpdate": 1768993371724,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "f74427bdb5fde342bf27f7b19db6b65ca73add68",
-          "message": "Merge pull request #251 from czlonkowski/fix/p0-workflow-creation-normalization-bug\n\nfix(p0): remove incorrect node type normalization before n8n API calls",
-          "timestamp": "2025-10-03T12:13:25+02:00",
-          "tree_id": "bcb74917537b64059331c1c4d3d780b1b45b5191",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/f74427bdb5fde342bf27f7b19db6b65ca73add68"
-        },
-        "date": 1759486525133,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0194,
-            "range": "0.37020000000000003",
-            "unit": "ms",
-            "extra": "51622 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.4046,
-            "range": "0.6403999999999996",
-            "unit": "ms",
-            "extra": "294 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0046,
-            "range": "0.28500000000000003",
-            "unit": "ms",
-            "extra": "216003 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0664,
-            "range": "0.41300000000000003",
-            "unit": "ms",
-            "extra": "15066 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2046,6 +1994,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/974a9fb3492fe2c4984ee0549085d531cdc6242a"
         },
         "date": 1768360561298,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0f15b82f1e5496b7b0f88910a9f61c152ceeb327",
+          "message": "chore: update n8n to 2.4.4 (#543)\n\n* chore: update n8n to 2.4.4 and bump version to 2.33.3\n\n- Updated n8n from 2.2.3 to 2.4.4\n- Updated n8n-core from 2.2.2 to 2.4.2\n- Updated n8n-workflow from 2.2.2 to 2.4.2\n- Updated @n8n/n8n-nodes-langchain from 2.2.2 to 2.4.3\n- Added new `icon` NodePropertyType (now 23 types total)\n- Rebuilt node database with 803 nodes (541 from n8n-nodes-base, 262 from @n8n/n8n-nodes-langchain)\n- Updated README badge with new n8n version\n- Updated CHANGELOG with dependency changes\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\n* fix: update n8n-workflow version in Dockerfile for icon type support\n\nThe Docker build was using n8n-workflow@^1.96.0 which doesn't have the new\n'icon' NodePropertyType. Updated to n8n-workflow@^2.4.2 to match the project's\npackage.json version.\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\n* fix: update comments to reflect 23 NodePropertyTypes\n\n- Updated test comment from '22 standard types' to '23 standard types'\n- Updated header comment from n8n-workflow v1.120.3 to v2.4.2\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Claude <noreply@anthropic.com>",
+          "timestamp": "2026-01-21T11:22:26+01:00",
+          "tree_id": "5b495f9a0c34a9a03922419c684a3b745f15d1ad",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/0f15b82f1e5496b7b0f88910a9f61c152ceeb327"
+        },
+        "date": 1768993371062,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
