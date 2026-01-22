@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1768993371724,
+  "lastUpdate": 1769043692055,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "a84dbd6a1596b252bfc56c6a49dac6ee4db0c2d8",
-          "message": "Merge pull request #252 from czlonkowski/feat/integration-tests-foundation\n\nfeat: Integration Testing Foundation (Phase 1)",
-          "timestamp": "2025-10-03T13:30:36+02:00",
-          "tree_id": "03fe6a6421eeab42b0997505ffa9dccbac5b3039",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/a84dbd6a1596b252bfc56c6a49dac6ee4db0c2d8"
-        },
-        "date": 1759491141285,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0191,
-            "range": "0.2942",
-            "unit": "ms",
-            "extra": "52461 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.1812,
-            "range": "0.5036",
-            "unit": "ms",
-            "extra": "314 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0048,
-            "range": "0.24780000000000002",
-            "unit": "ms",
-            "extra": "210122 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0671,
-            "range": "0.367",
-            "unit": "ms",
-            "extra": "14895 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2025,6 +1973,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/0f15b82f1e5496b7b0f88910a9f61c152ceeb327"
         },
         "date": 1768993371062,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "fad343797719f96c33417ef32b54fe4107d51581",
+          "message": "fix: memory leak in SSE session reset (#542) (#544)\n\nWhen SSE sessions are recreated every 5 minutes, the old session's MCP\nserver was not being closed, causing:\n- SimpleCache cleanup timer continuing to run indefinitely\n- Database connections remaining open\n- Cached data (~50-100MB per session) persisting in memory\n\nAdded server.close() call before transport.close() in resetSessionSSE(),\nmirroring the existing cleanup pattern in removeSession().\n\nFixes #542\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2026-01-21T13:56:16+01:00",
+          "tree_id": "a7886bb6cbe8230ac4306a4c4993459b90d6a5db",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/fad343797719f96c33417ef32b54fe4107d51581"
+        },
+        "date": 1769043691800,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
