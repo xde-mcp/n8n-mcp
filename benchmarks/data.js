@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1769216783408,
+  "lastUpdate": 1770372642370,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "4b764c6110f9e06774776ce721d41f4b2fd1c399",
-          "message": "Merge pull request #254 from czlonkowski/fix/telemetry-error-message-capture\n\nfeat(telemetry): capture error messages with security hardening",
-          "timestamp": "2025-10-03T17:07:02+02:00",
-          "tree_id": "0eaea9fd102d37fe82d6ecd16d29c3f72770ef1a",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/4b764c6110f9e06774776ce721d41f4b2fd1c399"
-        },
-        "date": 1759504145549,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0196,
-            "range": "0.29900000000000004",
-            "unit": "ms",
-            "extra": "50892 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.1765,
-            "range": "0.6139000000000001",
-            "unit": "ms",
-            "extra": "315 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0046,
-            "range": "0.30920000000000003",
-            "unit": "ms",
-            "extra": "218413 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0662,
-            "range": "0.2958",
-            "unit": "ms",
-            "extra": "15105 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1983,6 +1931,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/c8c76e435d80953cdbde3fc8b86675285c555b30"
         },
         "date": 1769216783114,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "68148804105efa21b592242a9e5f61f52c55c778",
+          "message": "chore: update n8n to 2.6.3 and bump version to 2.33.6 (#571)",
+          "timestamp": "2026-02-06T09:09:37+01:00",
+          "tree_id": "7cc6335dd85928c7b9ef7c72680ceec376426d28",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/68148804105efa21b592242a9e5f61f52c55c778"
+        },
+        "date": 1770372641567,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
