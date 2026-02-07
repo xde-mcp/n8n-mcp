@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1770372642370,
+  "lastUpdate": 1770458762836,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "88e288f8f622ce7f6c7b5fede070808f6fb7d480",
-          "message": "Merge pull request #256 from czlonkowski/feat/integration-tests-phase-2\n\nfeat(tests): implement Phase 2 integration testing - workflow creation tests",
-          "timestamp": "2025-10-04T10:45:54+02:00",
-          "tree_id": "954bf1e2cc08e2cd2e3eedde002c308350991863",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/88e288f8f622ce7f6c7b5fede070808f6fb7d480"
-        },
-        "date": 1759567663624,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0192,
-            "range": "0.24150000000000002",
-            "unit": "ms",
-            "extra": "52075 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.18,
-            "range": "0.5068000000000001",
-            "unit": "ms",
-            "extra": "314 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.005,
-            "range": "0.2547",
-            "unit": "ms",
-            "extra": "201379 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0655,
-            "range": "0.2891",
-            "unit": "ms",
-            "extra": "15275 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1962,6 +1910,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/68148804105efa21b592242a9e5f61f52c55c778"
         },
         "date": 1770372641567,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "1b328d8168608905ae0f4efd654d79c22d718507",
+          "message": "fix: include UI apps build in CI release pipeline (#575)\n\nThe release workflow only ran `npm run build` (TypeScript), skipping the\nUI apps build. This meant ui-apps/dist/ was missing from npm packages.\n\n- Change `npm run build` to `npm run build:all` in build-and-verify and\n  publish-npm jobs\n- Copy ui-apps/dist into the npm publish directory\n- Add ui-apps/dist/**/* to the published package files list\n- Bump version to 2.34.2\n\nConceived by Romuald Czlonkowski - https://www.aiadvisors.pl/en\n\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>",
+          "timestamp": "2026-02-07T05:40:21+01:00",
+          "tree_id": "21fc795a449cd4d5009f754d13215147c5067c6b",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/1b328d8168608905ae0f4efd654d79c22d718507"
+        },
+        "date": 1770458762122,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
