@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1770599434101,
+  "lastUpdate": 1770631632398,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "b3d42b339050a44ee5e1df590e7d4d8396656a72",
-          "message": "Merge pull request #259 from czlonkowski/feat/integration-tests-phase-4\n\nfeat: Phase 4 - Workflow Update Integration Tests",
-          "timestamp": "2025-10-04T23:00:41+02:00",
-          "tree_id": "8e1caad79a0f80733951dddde53a13869fa83024",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/b3d42b339050a44ee5e1df590e7d4d8396656a72"
-        },
-        "date": 1759611753949,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0194,
-            "range": "0.42469999999999997",
-            "unit": "ms",
-            "extra": "51457 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.4294,
-            "range": "0.7630000000000003",
-            "unit": "ms",
-            "extra": "292 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0049,
-            "range": "0.295",
-            "unit": "ms",
-            "extra": "205016 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0685,
-            "range": "0.479",
-            "unit": "ms",
-            "extra": "14590 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1899,6 +1847,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/c6015817146aa62981e129227bf9e72e40e27b1a"
         },
         "date": 1770599433714,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "34159f4ece6f345ead8f2c551fa391f621073f99",
+          "message": "fix: add legacy flat _meta key for MCP App rendering in Claude (#585)\n\nClaude.ai reads the flat `_meta[\"ui/resourceUri\"]` key to discover UI apps,\nnot the nested `_meta.ui.resourceUri`. Without the flat key, tools like\nn8n_health_check and n8n_list_workflows showed as collapsed accordions\ninstead of rendering rich UI. Now sets both keys, matching the behavior\nof the official registerAppTool helper from @modelcontextprotocol/ext-apps.\n\nConceived by Romuald Członkowski - www.aiadvisors.pl/en\n\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>",
+          "timestamp": "2026-02-09T06:40:52+01:00",
+          "tree_id": "5239293aeb3293cd3619ee62a2c6cae42facd4d2",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/34159f4ece6f345ead8f2c551fa391f621073f99"
+        },
+        "date": 1770631631571,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
