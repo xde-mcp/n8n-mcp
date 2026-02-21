@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1771582637152,
+  "lastUpdate": 1771636034867,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "57459c27e388cdc90423161957a275774bb91868",
-          "message": "Merge pull request #264 from czlonkowski/feat/integration-tests-phase-6\n\nfeat: Phase 6B integration tests (workflow autofix)",
-          "timestamp": "2025-10-05T09:59:27+02:00",
-          "tree_id": "d0693e21af7849ecf8b72faa333a4062d85a04a6",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/57459c27e388cdc90423161957a275774bb91868"
-        },
-        "date": 1759651278794,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0195,
-            "range": "0.4034",
-            "unit": "ms",
-            "extra": "51205 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.239,
-            "range": "0.7762000000000002",
-            "unit": "ms",
-            "extra": "309 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0048,
-            "range": "0.30210000000000004",
-            "unit": "ms",
-            "extra": "207059 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0695,
-            "range": "0.40149999999999997",
-            "unit": "ms",
-            "extra": "14379 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1836,6 +1784,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/77048347b3a82421ffa0b8b6bd44f8f50dd8cf52"
         },
         "date": 1771582636447,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4bad880f44fc26176083b1417681e45411cdeade",
+          "message": "fix: defensive JSON.parse for stringified object/array params (#605) (#606)\n\n* chore: update n8n to 2.8.3 and bump version to 2.35.3\n\n- Updated n8n from 2.6.3 to 2.8.3\n- Updated n8n-core from 2.6.1 to 2.8.1\n- Updated n8n-workflow from 2.6.0 to 2.8.0\n- Updated @n8n/n8n-nodes-langchain from 2.6.2 to 2.8.1\n- Fixed node loader to bypass restricted package.json exports in\n  @n8n/n8n-nodes-langchain >=2.9.0 (resolves via absolute paths)\n- Fixed community doc generator for cloud LLMs: added API key env var\n  support, switched to max_completion_tokens, auto-omit temperature\n- Rebuilt node database with 1,236 nodes (673 n8n-nodes-base,\n  133 @n8n/n8n-nodes-langchain, 430 community)\n- Refreshed community nodes (361 verified + 69 npm) with 424 AI summaries\n- Updated README badge with new n8n version and node counts\n- Updated CHANGELOG with dependency changes\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\n\n* fix: update documentation-generator tests for max_completion_tokens\n\n- Updated test assertions from max_tokens to max_completion_tokens\n- Updated testConnection token limit expectation from 10 to 200\n- Added temperature to test config to match new configurable behavior\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\n\n* fix: defensive JSON.parse for stringified object/array params (#605)\n\nClaude Desktop 1.1.3189 serializes object/array MCP parameters as JSON\nstrings, causing ZodError failures for ~60% of tools. Add schema-driven\ncoercion in the central CallToolRequestSchema handler to detect and parse\nthem back automatically.\n\nConceived by Romuald Czlonkowski - https://www.aiadvisors.pl/en\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>",
+          "timestamp": "2026-02-20T16:56:25+01:00",
+          "tree_id": "b382766ebaefb6c237f0966b5581ee6016e49f57",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/4bad880f44fc26176083b1417681e45411cdeade"
+        },
+        "date": 1771636034578,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
