@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1772964096402,
+  "lastUpdate": 1773536880574,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "czlonkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "czlonkowski",
-            "username": "czlonkowski"
-          },
-          "distinct": true,
-          "id": "e1be4473a328b598c1e1a46db3b7ebdc441c2a06",
-          "message": "Merge pull request #278 from czlonkowski/fix/issue-277-signal-handlers-stdio\n\nFix: Add signal handlers for stdio mode (Issue #277)\n\nFixes orphaned Node.js processes on Windows 11 when Claude Desktop quits.\n\nProduction-ready improvements:\n- Robust container detection (Docker, Kubernetes, Podman, containerd)\n- Fixed redundant exit calls with graceful 1000ms timeout\n- Error handling for stdin registration\n- Shutdown trigger logging for debugging\n\nCode Review: Approved - Production Ready (9.6/10)\nAll critical issues resolved, 90% Docker test pass confidence\n\nReported by: @Eddy-Chahed\nIssue: #277",
-          "timestamp": "2025-10-06T13:26:27+02:00",
-          "tree_id": "b0ca8db8325e3f28c4edb05066054060ab75262a",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/e1be4473a328b598c1e1a46db3b7ebdc441c2a06"
-        },
-        "date": 1759750129160,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0193,
-            "range": "0.25880000000000003",
-            "unit": "ms",
-            "extra": "51753 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.3839,
-            "range": "0.4937999999999998",
-            "unit": "ms",
-            "extra": "296 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0048,
-            "range": "0.27490000000000003",
-            "unit": "ms",
-            "extra": "208482 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0657,
-            "range": "0.3145",
-            "unit": "ms",
-            "extra": "15223 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1731,6 +1679,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/25b8a8145d0fc84fb23c51ffee6a103b99c90463"
         },
         "date": 1772964096111,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "599bc664d094b1729f71ef523c9d35d16a45f833",
+          "message": "fix: numeric sourceOutput remapping, IMAP trigger detection, AI tool description validation (#537, #538, #477, #602) (#636)\n\n- Remap numeric sourceOutput (\"0\",\"1\") to \"main\" with sourceIndex,\n  with guard to skip when branch/case smart params are present (#537)\n- Recognize emailReadImap as activatable trigger in isTriggerNode() (#538)\n- Add getToolDescription() helper checking toolDescription, description,\n  and options.description across all AI tool validators (#477)\n- Defensive check for missing workflow ID in create response (#602)\n- Relax flaky CI thresholds: perf test ratio 15→20, timing variance 10%→50%\n\nConceived by Romuald Członkowski - www.aiadvisors.pl/en\n\nCo-authored-by: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "timestamp": "2026-03-14T18:40:58+01:00",
+          "tree_id": "b8e5916dcaa1a0175ae3e1c2b3e3e5773e51b2e6",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/599bc664d094b1729f71ef523c9d35d16a45f833"
+        },
+        "date": 1773536880116,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
