@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1773536880574,
+  "lastUpdate": 1773623259773,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "9a00a990116de7f7bee8a4207a64b477b8a9721b",
-          "message": "Merge pull request #279 from czlonkowski/security/issue-265-pr1-critical-timing-and-injection\n\n🔒 CRITICAL Security Fixes: Timing Attack & Command Injection (Issue #265)",
-          "timestamp": "2025-10-06T14:39:38+02:00",
-          "tree_id": "6537a13d13339660588b6610048a622b0146028f",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/9a00a990116de7f7bee8a4207a64b477b8a9721b"
-        },
-        "date": 1759754499594,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0188,
-            "range": "0.2805",
-            "unit": "ms",
-            "extra": "53131 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.0926,
-            "range": "0.6011000000000002",
-            "unit": "ms",
-            "extra": "323 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0039,
-            "range": "0.2629",
-            "unit": "ms",
-            "extra": "256741 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0607,
-            "range": "0.3702",
-            "unit": "ms",
-            "extra": "16469 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1710,6 +1658,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/599bc664d094b1729f71ef523c9d35d16a45f833"
         },
         "date": 1773536880116,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f7a1cfe8bfe12530e012e43ca4a9de8dc943ca23",
+          "message": "fix: field normalization, AI connection validation, autofix filter (#581) (#638)\n\n- Normalize name→nodeName and id→nodeId for node-targeting operations in\n  the Zod schema transform, so LLMs using natural field names no longer\n  get \"Node not found\" errors\n- Replace hardcoded ALL_CONNECTION_TYPES with dynamic iteration so AI\n  sub-nodes (ai_outputParser, ai_document, ai_textSplitter, etc.) are\n  not flagged as disconnected during save\n- Add .catchall() to workflowConnectionSchema and extend connection\n  reference validation to cover all connection types, not just main\n- Fix filterOperationsByFixes ID-vs-name mismatch: typeversion-upgrade\n  operations now include nodeName alongside nodeId, and the filter checks\n  both fields\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\nCo-authored-by: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+          "timestamp": "2026-03-15T14:32:14+01:00",
+          "tree_id": "3e8170b820822d4dc4ea7be6f3fbc5c3c099c25d",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/f7a1cfe8bfe12530e012e43ca4a9de8dc943ca23"
+        },
+        "date": 1773623259500,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
