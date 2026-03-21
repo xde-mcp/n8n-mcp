@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1773882702666,
+  "lastUpdate": 1774055428445,
   "repoUrl": "https://github.com/xde-mcp/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "50439e2aa14c4cc593b477947ac55f3c19ae1229",
-          "message": "Merge pull request #281 from czlonkowski/feature/ai-node-validation\n\nfix: AI workflow validation - critical node type normalization bug",
-          "timestamp": "2025-10-07T11:20:09+02:00",
-          "tree_id": "c9b0b68988ae5bfeac4548a49fed7d321355fd5c",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/50439e2aa14c4cc593b477947ac55f3c19ae1229"
-        },
-        "date": 1759828917655,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0191,
-            "range": "0.23900000000000002",
-            "unit": "ms",
-            "extra": "52476 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.3962,
-            "range": "0.43900000000000006",
-            "unit": "ms",
-            "extra": "294 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0046,
-            "range": "0.2678",
-            "unit": "ms",
-            "extra": "217233 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0662,
-            "range": "0.3769",
-            "unit": "ms",
-            "extra": "15117 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1668,6 +1616,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/xde-mcp/n8n-mcp/commit/14962a39b648d0e22d40b7848950b761d458f34c"
         },
         "date": 1773882702373,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "47a1cb135db7fd4a9f02d694286c5091dc86cbe2",
+          "message": "feat: implement transferWorkflow operation in n8n_update_partial_workflow (#644) (#649)\n\nAdd transferWorkflow diff operation to move workflows between n8n projects:\n- TransferWorkflowOperation type with destinationProjectId field\n- WorkflowDiffEngine validates and tracks transfer intent\n- Handler calls PUT /workflows/{id}/transfer after update\n- N8nApiClient.transferWorkflow() method\n- Zod schema validates destinationProjectId is non-empty\n- Tool description and documentation updated\n- inferIntentFromOperations case for transfer\n\nAlso fixes two pre-existing bugs found during review:\n- continueOnError path now properly extracts/propagates activation flags\n- Debug log in updateConnectionReferences shows correct old name\n\nBased on work by @djakielski in PR #645.\n\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en",
+          "timestamp": "2026-03-20T17:50:00+01:00",
+          "tree_id": "1d2537cd8b69eecf2e98ceadad07b68cbc5df9ef",
+          "url": "https://github.com/xde-mcp/n8n-mcp/commit/47a1cb135db7fd4a9f02d694286c5091dc86cbe2"
+        },
+        "date": 1774055427814,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
